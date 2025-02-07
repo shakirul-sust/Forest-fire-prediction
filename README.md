@@ -51,8 +51,8 @@ The library dependencies, including seaborn, scikit-learn, and joblib, are state
 - The data is standardized using the `StandardScaler`.
 - Three models are trained. These models are:
   - **Linear Regression**
-  - **Decision Tree Regression**
-  - **Random Forest Regression**
+  - **Decision Tree Regressor**
+  - **Random Forest Regressor**
 - The model evaluation takes into account the **Root Mean Squared Error (RMSE)**.
 
 ## Saving Models
