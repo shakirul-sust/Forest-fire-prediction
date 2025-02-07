@@ -2,24 +2,24 @@
 
 ## Overview
 
-This project aims to predict forest fire occurrences using various machine learning models. The dataset is preprocessed, exploratory data analysis (EDA) is performed, and multiple models are trained to predict fire risk based on different features.
+This project intends to forecast the occurrence of forest fires using various machine learning models. The dataset is preprocessed, exploratory data analysis (EDA) is performed, and multiple models are trained to predict fire risk based on different features.
 
 ## Features
 
-- **Data Preprocessing**: Cleaning and encoding categorical data
-- **Exploratory Data Analysis (EDA)**: Visualizing missing values and distributions
-- **Feature Engineering**: Dropping unnecessary columns and transforming numerical features
+- **Data Preprocessing**: Cleaning and transforming categorical data into numerical data
+- **Exploratory Data Analysis (EDA)**: Making charts and looking at missing and distribution values
+- **Feature Engineering**: Removing not needed columns and changing the numerical features
 - **Machine Learning Models**: Linear Regression, Decision Tree, and Random Forest
-- **Model Evaluation**: RMSE calculation to compare model performance
-- **Model Saving**: Trained models are saved for later use
+- **Model Evaluation**: RMSE calculation for model comparison
+- **Model Saving**: Models are trained and saved via the script
 
 ## Dataset
 
-The dataset used is `forest_fire.csv`, which contains various features related to forest fire occurrences. The preprocessing script removes unnecessary columns (`day`, `month`, `year`) and encodes categorical variables.
+The dataset file `forest_fire.csv` with all the features that cause the forest to burn down such as fire hot spots, railways, highways, etc. is the one used. To prepare the data the following transformations are made: the data preprocessing code takes out columns such as (`day`, `month`, and `year`). It encodes categorical variables instead of solving the problem manually.
 
 ## Installation
 
-To run this project, install the required dependencies using:
+Some dependencies are required to be installed as follows:
 
 ```sh
 pip install -r requirements.txt
@@ -27,7 +27,7 @@ pip install -r requirements.txt
 
 ## Running the Project
 
-1. Place the dataset inside the `data/` directory.
+1. Copy the dataset to the `data/` directory
 2. Run the main script:
 
 ```sh
@@ -36,27 +36,24 @@ python main.py
 
 ## Dependencies
 
-This project uses several Python libraries, including:
+For this project the following Python libraries are employed:
 
 - `pandas`
 - `numpy`
 - `matplotlib`
-- `seaborn`
-- `scikit-learn`
-- `joblib`
 
-All dependencies are listed in `requirements.txt`.
+The library dependencies, including seaborn, scikit-learn, and joblib, are stated in requirements.txt
 
 ## Model Training
 
-- The dataset is split into training and testing sets.
-- Missing values are handled using `SimpleImputer`.
-- Data is scaled using `StandardScaler`.
-- Three models are trained:
+- Data is separated into training and testing parts, which are then used for building and testing the model successively.
+- Missing values are imputed using a `SimpleImputer`.
+- The data is standardized using the `StandardScaler`.
+- Three models are trained. These models are:
   - **Linear Regression**
   - **Decision Tree Regression**
   - **Random Forest Regression**
-- Models are evaluated based on **Root Mean Squared Error (RMSE)**.
+- The model evaluation takes into account the **Root Mean Squared Error (RMSE)**.
 
 ## Saving Models
 
